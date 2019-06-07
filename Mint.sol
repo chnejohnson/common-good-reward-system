@@ -40,9 +40,9 @@ contract Mint is ERC20, ERC20Detailed {
     _;
   }
 
-  modifier onlyVoter(uint _proposal) {
-    require(msg.sender != proposals[_proposal].sponsor, "you are the sponsor of the proposal.");
-    require(proposals[_proposal].part[msg.sender] == 0, "you are the participant of the proposal.");
+  modifier onlyVoter(uint _prop) {
+    require(msg.sender != proposals[_prop].sponsor, "you are the sponsor of the proposal.");
+    require(proposals[_prop].part[msg.sender] == 0, "you are the participant of the proposal.");
     _;
   }
 
@@ -53,9 +53,8 @@ contract Mint is ERC20, ERC20Detailed {
 
   modifier onlyVoting(uint _prop) {
     require(proposals[_prop].stage == Stages.Voting, "not in the Voting period.");
-    if(proposals[_prop].deadline < now) {
+    if(proposals[_prop].deadline < now){
       proposals[_prop].stage = Stages.End;
-      _burn(address(this), balanceOf(address(this)));
     }
     _;
   }
@@ -77,8 +76,8 @@ contract Mint is ERC20, ERC20Detailed {
   function join(uint _proposal, uint _amount) public onlyStart(_proposal) {
     require(msg.sender != proposals[_proposal].sponsor, "you are the sponsor of the proposal.");
     require(_amount >= 1000, "you should send more principle.");
-    transfer(address(this), _amount);
     proposals[_proposal].part[msg.sender] = _amount;
+    _burn(msg.sender, _amount);
   }
 
   function startVoting(uint _prop) public onlyStart(_prop) onlySponsor(_prop) {
@@ -92,28 +91,27 @@ contract Mint is ERC20, ERC20Detailed {
     _mint(msg.sender, 2000);
   }
 
-  function voteFor(uint _proposal, uint _vote) public onlyVoting(_proposal) hasNotVoted(_proposal) onlyVoter(_proposal){
+  function voteFor(uint _prop, uint _vote) public onlyVoting(_prop) hasNotVoted(_prop) onlyVoter(_prop){
     require(_vote > 0, "you should vote more than one.");
-    transfer(address(this), _vote.mul(_vote).mul(1000));
-    proposals[_proposal].pros = proposals[_proposal].pros.add(_vote);
-    proposals[_proposal].voted[msg.sender] = true;
-    proposals[_proposal].numOfVoters = proposals[_proposal].numOfVoters.add(1);
+    proposals[_prop].pros = proposals[_prop].pros.add(_vote);
+    proposals[_prop].voted[msg.sender] = true;
+    proposals[_prop].numOfVoters = proposals[_prop].numOfVoters.add(1);
+    _burn(msg.sender, _vote.mul(_vote).mul(1000));
   }
 
-  function voteAgainst(uint _proposal, uint _vote) public onlyVoting(_proposal) hasNotVoted(_proposal) onlyVoter(_proposal){
+  function voteAgainst(uint _prop, uint _vote) public onlyVoting(_prop) hasNotVoted(_prop) onlyVoter(_prop){
     require(_vote > 0, "you should vote more than one.");
-    transfer(address(this), _vote.mul(_vote).mul(1000));
-    proposals[_proposal].cons = proposals[_proposal].cons.add(_vote);
-    proposals[_proposal].voted[msg.sender] = true;
-    proposals[_proposal].numOfVoters = proposals[_proposal].numOfVoters.add(1);
+    proposals[_prop].cons = proposals[_prop].cons.add(_vote);
+    proposals[_prop].voted[msg.sender] = true;
+    proposals[_prop].numOfVoters = proposals[_prop].numOfVoters.add(1);
+    _burn(msg.sender, _vote.mul(_vote).mul(1000));
   }
 
-  function votingEndOnlyDev(uint _proposal) public onlyVoting(_proposal) {
-    proposals[_proposal].stage = Stages.End;
-    _burn(address(this), balanceOf(address(this)));
+  function votingEndOnlyDev(uint _prop) public onlyVoting(_prop) {
+    proposals[_prop].stage = Stages.End;
   }
 
-  function sponsorWithdraw(uint _prop) public onlyEnd(_prop) onlySponsor(_prop) returns(bool) {
+  function sponsorReward(uint _prop) public onlyEnd(_prop) onlySponsor(_prop) returns(bool) {
     (bool outcome,,) = _checkVote(_prop);
     if(outcome){
       proposals[_prop].withdrawn[msg.sender] = true;
@@ -124,7 +122,7 @@ contract Mint is ERC20, ERC20Detailed {
     }
   }
 
-  function partWithdraw(uint _prop) public onlyEnd(_prop) onlyPart(_prop) {
+  function partReward(uint _prop) public onlyEnd(_prop) onlyPart(_prop) {
     uint principal = proposals[_prop].part[msg.sender];
     uint amount = _calc(_prop, principal);
     proposals[_prop].part[msg.sender] = 0;
