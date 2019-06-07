@@ -46,8 +46,8 @@ contract Mint is ERC20, ERC20Detailed {
     _;
   }
 
-  modifier onlyStart(uint _proposal) {
-    require(proposals[_proposal].stage == Stages.Start, "not in the Start period.");
+  modifier onlyStart(uint _prop) {
+    require(proposals[_prop].stage == Stages.Start, "not in the Start period.");
     _;
   }
 
@@ -55,17 +55,18 @@ contract Mint is ERC20, ERC20Detailed {
     require(proposals[_prop].stage == Stages.Voting, "not in the Voting period.");
     if(proposals[_prop].deadline < now){
       proposals[_prop].stage = Stages.End;
+      return;
     }
     _;
   }
 
-  modifier onlyEnd(uint _proposal) {
-    require(proposals[_proposal].stage == Stages.End, "not in the End period.");
+  modifier onlyEnd(uint _prop) {
+    require(proposals[_prop].stage == Stages.End, "not in the End period.");
     _;
   }
 
-  modifier hasNotVoted(uint _proposal) {
-    require(proposals[_proposal].voted[msg.sender] == false, "you have voted.");
+  modifier hasNotVoted(uint _prop) {
+    require(proposals[_prop].voted[msg.sender] == false, "you have voted.");
     _;
   }
 
@@ -73,10 +74,10 @@ contract Mint is ERC20, ERC20Detailed {
     proposals.push(Proposal(msg.sender, 0, 0, 0, 0, Stages.Start));
   }
 
-  function join(uint _proposal, uint _amount) public onlyStart(_proposal) {
-    require(msg.sender != proposals[_proposal].sponsor, "you are the sponsor of the proposal.");
+  function join(uint _prop, uint _amount) public onlyStart(_prop) {
+    require(msg.sender != proposals[_prop].sponsor, "you are the sponsor of the proposal.");
     require(_amount >= 1000, "you should send more principle.");
-    proposals[_proposal].part[msg.sender] = _amount;
+    proposals[_prop].part[msg.sender] = _amount;
     _burn(msg.sender, _amount);
   }
 
@@ -107,7 +108,8 @@ contract Mint is ERC20, ERC20Detailed {
     _burn(msg.sender, _vote.mul(_vote).mul(1000));
   }
 
-  function votingEndOnlyDev(uint _prop) public onlyVoting(_prop) {
+  //only for developing to across three days voting period.
+  function DevEndVoting(uint _prop) public onlyVoting(_prop) {
     proposals[_prop].stage = Stages.End;
   }
 
