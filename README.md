@@ -14,10 +14,10 @@ In my contracts, 1000 token equal to 1 voice credit. So in the QV system you sho
 ### Reward System
 So the question is how much sponsor or participants get from the successful proposal?
 
-When the proposal succeeds, sponsor can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cfrac%7Btotalvoters%7D%7B2%7D) token, and in contrast, sponsor get nothing.
+When the proposal succeeds, sponsor can get ![(numOfVoters)/2](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20%5Cfrac%7BnumOfVoters%7D%7B2%7D) token, and in contrast, sponsor get nothing.
 
-For the participants, if he cast P token into the proposal of the contract, when the proposal succeeds and the ratio of voting result is pros:cons, he can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20P%20*%281&plus;%5Cfrac%7Bpros%20-%20cons%7D%7Bpros%20&plus;%20cons%7D%20%29) token.
-If the proposal is rejected, he will get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20P%20*%281-%5Cfrac%7Bcons%20-%20pros%7D%7Bpros%20&plus;%20cons%7D%20%29) token.
+For the participants, if he cast P token into the proposal of the contract, when the proposal succeeds and the ratio of voting result is pros:cons, he can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20&plus;%5Cfrac%7Bpros%20-%20cons%7D%7Bpros%20&plus;%20cons%7D%29) token.
+If the proposal is rejected, he will get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20-%5Cfrac%7Bcons%20-%20pros%7D%7Bpros%20&plus;%20cons%7D%29) token.
 
 
 
