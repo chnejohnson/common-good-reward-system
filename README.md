@@ -16,8 +16,8 @@ So the question is how much sponsor or participants get from the successful prop
 
 When the proposal succeeds, sponsor can get ![(numOfVoters)/2](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20%5Cfrac%7BnumOfVoters%7D%7B2%7D) token, and in contrast, sponsor get nothing.
 
-For the participants, if he cast P token into the proposal of the contract, when the proposal succeeds and the ratio of voting result is pros:cons, he can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20&plus;%5Cfrac%7Bpros%20-%20cons%7D%7Bpros%20&plus;%20cons%7D%29) token.
-If the proposal is rejected, he will get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20-%5Cfrac%7Bcons%20-%20pros%7D%7Bpros%20&plus;%20cons%7D%29) token.
+For the participants, he must transfer P token to the proposal of the contract, when the proposal succeeds and the ratio of voting result is pros to cons, he can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20&plus;%5Cfrac%7Bpros%20-%20cons%7D%7Bpros%20&plus;%20cons%7D%29) tokens.
+Otherwise, If the proposal is rejected, he would get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20-%5Cfrac%7Bcons%20-%20pros%7D%7Bpros%20&plus;%20cons%7D%29) tokens.
 
 
 
