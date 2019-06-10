@@ -9,7 +9,7 @@ There are 3 roles playing in this game.
 3. **voters**: people who can **get 2000 free token** to **vote for** or **against** the proposal, or do nothing to cumulate token for voting proposal in the future.
 
 ### Quadratic Voting
-In my contracts, 1000 token equal to 1 voice credit. So in the QV system you should use 1 voice credit to buy 1 vote, 4 voice credit buys 2 votes, and 9 voice credit buys 3 votes, and so on.
+In my contracts, 1000 token equal to 1 voice credit. So in the QV system you should use 1 voice credit(1000 tokens) to buy 1 vote, 4 voice credit(4000 tokens) buys 2 votes, and 9 voice credit buys 3 votes, and so on.
 
 ### Reward System
 So the question is that how much tokens sponsor or participants get from the successful proposal?
