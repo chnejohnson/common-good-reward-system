@@ -22,9 +22,9 @@ Otherwise, If the proposal is rejected, he would get ![](https://latex.codecogs.
 ## Reference
 The idea of this project mainly come from three inspiring works. The first one is a French documentary film named *Tomorrow* directed by Cyril Dion and Mélanie Laurent in 2015. Their beautiful vision about local living economy and complementary currency inspired me a lot.
 
-Second, it's Ethereum community. There are many creative ideas like [*Call-out assurance contracts*](https://ethresear.ch/t/call-out-assurance-contracts/466) by Vitalik, [*HumanityDAO*](https://humanitydao.org/), a smart contract of Writing a Dominant Assurance Contract by [*Program the Blockchain*](https://programtheblockchain.com/posts/2018/05/01/writing-a-dominant-assurance-contract/), token curation markets, and [*A Risk Redistribution Standard for Practical Cryptocurrency Payment*](https://www.youtube.com/watch?v=6gOyQ5JLcmQ&fbclid=IwAR1G2BMhMITBNrNeHyzHh6AdOa76oy6gNLvxOID9MLKa8I9AIBG2WQeo9pk) by Hu Yao-Chieh & Lee Ting Ting.
+Second, it's Ethereum community. There are many creative ideas like [*Call-out assurance contracts*](https://ethresear.ch/t/call-out-assurance-contracts/466) by Vitalik, [*HumanityDAO*](https://humanitydao.org/), a smart contract of Writing a Dominant Assurance Contract by [*Program the Blockchain*](https://programtheblockchain.com/posts/2018/05/01/writing-a-dominant-assurance-contract/), the idea of token curation markets, and [*A Risk Redistribution Standard for Practical Cryptocurrency Payment*](https://www.youtube.com/watch?v=6gOyQ5JLcmQ&fbclid=IwAR1G2BMhMITBNrNeHyzHh6AdOa76oy6gNLvxOID9MLKa8I9AIBG2WQeo9pk) by Hu Yao-Chieh & Lee Ting Ting.
 
-Finally, an excellent book about political economy named *Radical Markets* written by Eric A. Posner & E. Glen Weyl, which actually enlightens me to come up with the idea of markets in public goods.
+Finally, it's an excellent book about political economy named *Radical Markets* written by Eric A. Posner & E. Glen Weyl. The idea of Radical Democracy in chapter 2 actually enlightens me to come up with the idea of markets in public goods.
 
-There are more good works inspiring me on the internet I didn't referred, I just list some of the important ones, and hope the project can also inspire you.
+There are more good works inspiring me on the internet or in my life I didn't referred, I just listed some of the important ones, and hoped the project can also inspire you to some degree.
 
