@@ -6,7 +6,7 @@ The core idea of this project is that people use tokens as voice credit to buy v
 There are 3 roles playing in this game.
 1. **sponsor**: the person who **registries** a proposal and has a right to start voting period and waits to get the rewards or nothing.
 2. **participants**: people who **join** the proposal by casting some token into the contract and wait voting result to get the interest reward or the contract would shrink the principle when the proposal is rejected.
-3. **voters**: people who can **get 2000 free token** to **vote for** or **against** the proposal, or do nothing to cumulate token for proposal in the future.
+3. **voters**: people who can **get 2000 free token** to **vote for** or **against** the proposal, or do nothing to cumulate token for voting proposal in the future.
 
 ### Quadratic Voting
 In my contracts, 1000 token equal to 1 voice credit. So in the QV system you should use 1 voice credit to buy 1 vote, 4 voice credit buys 2 votes, and 9 voice credit buys 3 votes, and so on.
