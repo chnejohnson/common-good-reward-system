@@ -1,6 +1,6 @@
 # Common Good Reward System
 ## Abstract
-The core idea of this project is that people use tokens as voice credit to buy vote in order to decide whether the smart contract mints new tokens to reward the sponsor and the participants of the proposal. The use case of this project is not for the internet community but for the local living in reality. Besides, it's not a business model to earn profit. The purpose of this project is dedicated to facilitating local common good which can be rewarded by giving tokens. The nature of this project is decentralized and altruism, so the first proposal for voters to vote is the reward system itself.
+The core idea of this project is that people use tokens as voice credit to buy vote in order to decide whether the smart contract mints new tokens to reward the sponsor and the participants of the proposal. The use case of this project is not for the internet community but for the local living in reality. Besides, it's not a business model to earn profit. The purpose of this project is dedicated to facilitating local common good which can be rewarded by giving tokens. The nature of this project is decentralized and altruism, so the first  proposal for voters to vote is the reward system itself.
 
 ## Game
 There are 3 roles playing in this game.
