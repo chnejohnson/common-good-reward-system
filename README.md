@@ -19,7 +19,7 @@ When the proposal succeeds, sponsor can get ![(numOfVoters)/2](https://latex.cod
 For the participants, he must transfer P token to the proposal of the contract, when the proposal succeeds and the ratio of voting result is pros to cons, he can get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20&plus;%5Cfrac%7Bpros%20-%20cons%7D%7Bpros%20&plus;%20cons%7D%29) tokens.
 Otherwise, If the proposal is rejected, he would get ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B80%7D%20%5Cbg_white%20%5Cfn_phv%20P%20*%281%20-%5Cfrac%7Bcons%20-%20pros%7D%7Bpros%20&plus;%20cons%7D%29) tokens.
 
-## Reference
+## References
 The idea of this project mainly come from three inspiring masterpieces. The first one is a French documentary film named *Tomorrow* directed by Cyril Dion and Mélanie Laurent in 2015. Their beautiful vision about local living economy and complementary currency are appealing to me.
 
 The second one is Ethereum and its community. There are many creative ideas like [*Call-out assurance contracts*](https://ethresear.ch/t/call-out-assurance-contracts/466) by Vitalik, [*HumanityDAO*](https://humanitydao.org/), [*Writing a Dominant Assurance Contract*](https://programtheblockchain.com/posts/2018/05/01/writing-a-dominant-assurance-contract/) by Program the Blockchain, the idea of token curation markets, [*A Risk Redistribution Standard for Practical Cryptocurrency Payment*](https://www.youtube.com/watch?v=6gOyQ5JLcmQ&fbclid=IwAR1G2BMhMITBNrNeHyzHh6AdOa76oy6gNLvxOID9MLKa8I9AIBG2WQeo9pk) by Hu Yao-Chieh & Lee Ting Ting, and of course the decentralized philosophy of blockchain.
